@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Login Exitoso</title>
+  <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+  <h1>¡Has iniciado sesión con Google!</h1>
+  <p>Tu token JWT es:</p>
+  <pre id="tokenDisplay">Cargando...</pre>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+    document.getElementById('tokenDisplay').textContent = token || 'No se recibió token';
+  </script>
+</body>
+</html>
